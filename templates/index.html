@@ -1,1 +1,65 @@
-<p> Hello World!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
+    <title>Shabbat @ Vic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="banner-container">
+            <h1>Shabbat @ Vic</h1>
+        </div>
+
+        <div class="pg_tabs-container">
+            <button> Home </button>
+            <button> About Us </button>
+            <button> Contact Us </button>
+            <button> Next Event </button>
+            <button> Blog </button>
+        </div>
+
+    </header>
+
+    <div class="main-container">
+
+        <div class="left-container">
+            <div class="welcome-text">
+                <h1>
+                    Shalom, 
+                </h1>
+                
+                <h2>
+                    We are a small group of <br>
+                    Shabbat enjoyers. <br>
+                </h2>
+    
+                <a>We welcome you to join us.</a>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <button>Learn More</button>
+            <button>I Don't Need to know anything else</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; Shabbat @ Vic. All rights reserved.</p>
+        <p>Made by Sean Belavin</p>
+        <p>Last Updated: Aug 16th 2024</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>
