@@ -10,6 +10,7 @@ header {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   width: 100vw;
   height: 15vh;
@@ -21,6 +22,28 @@ header .banner-container{
   background-color: cadetblue;
   width: 100%;
   height: 50%;
+
+  font-size: calc(0.5vw + 1vh);
+}
+header .banner-container h1{
+  margin-top: 2vh;
+}
+
+header .pg_tabs-container {
+  height: 50%;
+  width: 75%;
+  background-color: saddlebrown;
+
+  display: flex;
+}
+
+header .pg_tabs-container button{
+  margin: auto;
+
+  width: 10%;
+  height: 50%;
+
+  font-size: min(2vw, 15px);
 }
 
 .main-container {
@@ -37,29 +60,41 @@ header .banner-container{
 }
 
 .left-container {
-  background-image: linear-gradient(blue,red);
+  background-color: white;
 
-  width: 60vw;
+  width: 70vw;
 }
 
-.left-container h1,h2,a{
-  font-family: "Cedarville Cursive", cursive;
-  font-weight: 400;
+.welcome-text p,a{
+  font-family: "Playwrite AU TAS";
   font-style: normal;
 
-  color: white;  
+  color: black;  
 }
 
-.left-container h1{
-  font-size: 100%;
+.welcome_1-text p{
+  font-weight: 400;
+  font-size: calc(5vw + 5vh);
+  margin: 0;
+}
+.welcome_2-text p{
+  font-weight: 200;
+  font-size: calc(2vw + 2vh);
+  margin: 0;
 }
 
-.left-container h2{
-  font-size: 100%;
+.welcome_3-text{
+  margin-top: 5vh;
+}
+.welcome_3-text a{
+  font-weight: 400;
+  font-size: calc(2vw + 2vh);
+  margin: 0;
 }
 
-.left-container a{
-  font-size: 100%;
+.right-container{
+  background-color: khaki;
+  width: 30vw;
 }
 
 footer {
