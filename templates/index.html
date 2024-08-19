@@ -20,18 +20,40 @@
         </div>
 
         <div class="pg_tabs-container">
-            <button> Home </button>
-            <button> About Us </button>
-            <button> Contact Us </button>
-            <button> Events </button>
-            <button> Blog </button>
+            <button id="tab0" onclick="switchtab(0)" class="pg_tab pg_tab-active"> Home </button>
+            <button id="tab1" onclick="switchtab(1)" class="pg_tab"> About Us </button>
+            <button id="tab2" onclick="switchtab(2)" class="pg_tab"> Contact Us </button>
+            <button id="tab3" onclick="switchtab(3)" class="pg_tab"> Events </button>
+            <button id="tab4" onclick="switchtab(4)" class="pg_tab"> Blog </button>
         </div>
+
+        <script>
+            function switchtab(num){
+                for (i=0; i <= 4; i++){
+                    console.log(i)
+                    if (i == num){
+                        console.log("equal",num)
+                        document.getElementById("tab"+(num).toString()).classList.add("pg_tab-active")
+                    } else {
+                        document.getElementById("tab"+(i).toString()).classList.remove("pg_tab-active")
+                    }
+                }
+            }
+        </script>
 
     </header>
 
     <div class="main-container">
 
         <div class="left-container">
+            <img id="bg1" class="background-img" src="{{ url_for('static', filename='img/shabbat_dinner.JPG') }}">
+            <!-- <img id="bg2" class="background-img" src="{{ url_for('static', filename='img/passover_2.JPG') }}"> 
+            <img id="bg3" class="background-img" src="{{ url_for('static', filename='img/purim_dinner.JPG') }}">  -->
+
+            <script>
+
+            </script>
+
             <div class="welcome-text">
                 <div class="welcome_1-text">
                     <p>Shalom, </p>
