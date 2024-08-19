@@ -3,7 +3,6 @@
   --blackvic: #272727;
   --bluevic: #2B50AA;
   --orangevic: #FF9D47;
-  --greyvic: #B8DBD9;
   --whitevic: #FFFBFE;
 
 
@@ -15,9 +14,18 @@ html{
   width: 100vw;
 }
 
+body {
+  height: 100%;
+  overflow: hidden;
+
+  font-family: "Raleway", sans-serif;
+  background-color: var(--bluevic);
+}
+
 header {
   position: absolute;
   left: 0; right: 0; top: 0;
+  z-index: 10;
 
   display: flex;
   flex-direction: column;
@@ -26,7 +34,7 @@ header {
   width: 100vw;
   height: 15vh;
 
-  background-color: var(--greyvic);
+  background-color: var(--bluevic);
 }
 
 header .banner-container{
@@ -36,7 +44,8 @@ header .banner-container{
   font-size: calc(0.5vw + 1vh);
 
   background-color: var(--bluevic);
-  color: var(--whitevic)
+  color: var(--whitevic);
+  /* border-bottom: 0.5vh solid var(--whitevic) */
 }
 header .banner-container h1{
   margin-top: 2vh;
@@ -51,21 +60,32 @@ header .pg_tabs-container {
 
 header .pg_tabs-container .pg_tab{
   margin: auto;
+  box-sizing: border-box;
 
   width: 10%;
+  min-width: fit-content;
   height: 50%;
+  padding-left: 2vw;
+  padding-right: 2vw;
 
   font-size: min(2vw, 15px);
   border: none;
-  border-bottom: 0.1vh solid #272727;
-  background-color: var(--greyvic);
+  border: 0vh solid #272727;
+  background-color: var(--whitevic);
+  border-radius: 2vmin;
+  box-shadow: 0 0 1vh var(--blackvic);
+  white-space: nowrap;
 
-  transition: all 0.2s;
+
+  transition: all 0.3s;
+  transition-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
 }
 
 .pg_tab-active{
-  border-bottom: 0.5vh solid #272727 !important;
+  border: 0.5vh solid var(--whitevic) !important;
   font-weight: 800;
+  background-color: var(--bluevic) !important;
+  color: var(--whitevic)
 }
 
 .main-container {
@@ -77,19 +97,17 @@ header .pg_tabs-container .pg_tab{
   height: 80vh;
 
   display: flex;
-
 }
 
 .left-container {
-  background-color: white;
-
   width: 50vw;
 }
 
 .left-container img {
   z-index: 0;
-  height: auto;
-  width: 100vw;
+  min-width: 100vw;
+
+  transform: scale(1) translate(0, -25%);
 }
 
 .welcome-text {
@@ -126,8 +144,35 @@ header .pg_tabs-container .pg_tab{
 }
 
 .right-container{
-  background-image: linear-gradient(90deg,rgb(0,0,0,0),var(--bluevic));
+  z-index: 8;
+  background-image: linear-gradient(90deg,rgb(0,0,0,0),var(--blackvic));
   width: 50vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-button {
+  text-align: center;
+
+  border: 0.75vh solid var(--whitevic);
+  background-color: var(--bluevic);
+  color: var(--whitevic);
+
+  font-size: calc(2vw + 2vh);
+
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  border-radius: 5vmin;
+
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+
+  box-shadow: 0 0 2vh var(--blackvic);
 }
 
 footer {
