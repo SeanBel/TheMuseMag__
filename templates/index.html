@@ -16,16 +16,41 @@
 </head>
 
 <body>
-    <div class="header">Header</div>
+    <div class="header">THE</div>
+
+    <!-- <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/wnhxl/qavf/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div> -->
 
     <div class="shifty-title">
-        <div class="letters">M</div>
-        <div class="letters">U</div>
-        <div class="letters">S</div>
-        <div class="letters">E</div>
+        <div class="letters" id="master_works">
+            <div class="letter">
+                <img class="cap-letter" src="static/img/Muse_M.svg"/>
+                <div class="text_slide right">aster Works</div>
+            </div>
+        </div>
+
+        <div class="letters" id="about_us">
+            <div class="letter">
+                <div class="text_slide left">About</div>
+                <img class="cap-letter" src="static/img/Muse_U.svg"/>
+                <div class="text_slide right">s</div>
+            </div>
+        </div>
+
+        <div class="letters" id="submissions">
+            <div class="letter">
+                <img class="cap-letter" src="static/img/Muse_S.svg"/>
+                <div class="text_slide right">ubmissions</div>
+            </div>
+        </div>
+        <div class="letters" id="editions">
+            <div class="letter">
+                <img class="cap-letter" src="static/img/Muse_E.svg"/>
+                <div class="text_slide right">ditions</div>
+            </div>
+        </div>
     </div>
 
-    <div class="footer">Footer</div>
+    <div class="footer">Designed by Sean Belavin </div>
 
     <script>
         const container = document.querySelector('.shifty-title');
@@ -45,6 +70,24 @@
 
             container.style.transform = `translate(-50%, -50%) translate(${translateX}px, ${translateY}px)`;
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const routes = {
+        'master_works': '/masterworks',
+        'about_us': '/about',
+        'submissions': '/submissions',
+        'editions': '/editions'
+    };
+
+    for (const [containerId, route] of Object.entries(routes)) {
+        const container = document.getElementById(containerId);
+        if (container) {
+            container.addEventListener('click', function() {
+                window.location.href = route;
+            });
+        }
+    }
+});
     </script>
 </body>
 
