@@ -9,80 +9,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>Shabbat @ Vic</title>
+    <title>TheMuseMag__</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <script src="js/scripts.js" type="text/javascript"></script>
+
 </head>
 
 <body>
-    <header>
-        <div class="banner-container">
-            <h1>Shabbat @ Vic</h1>
-        </div>
+    <div class="header">Header</div>
 
-        <div class="pg_tabs-container">
-            <button id="tab0" onclick="switchtab(0)" class="pg_tab pg_tab-active"> Home </button>
-            <button id="tab1" onclick="switchtab(1)" class="pg_tab"> About Us </button>
-            <button id="tab2" onclick="switchtab(2)" class="pg_tab"> Contact Us </button>
-            <button id="tab3" onclick="switchtab(3)" class="pg_tab"> Events </button>
-            <button id="tab4" onclick="switchtab(4)" class="pg_tab"> Blog </button>
-        </div>
-
-        <script>
-            function switchtab(num){
-                for (i=0; i <= 4; i++){
-                    console.log(i)
-                    if (i == num){
-                        console.log("equal",num)
-                        document.getElementById("tab"+(num).toString()).classList.add("pg_tab-active")
-                    } else {
-                        document.getElementById("tab"+(i).toString()).classList.remove("pg_tab-active")
-                    }
-                }
-            }
-        </script>
-
-    </header>
-
-    <div class="main-container">
-
-        <div class="left-container">
-            <img id="bg1" class="background-img" src="{{ url_for('static', filename='img/shabbat_dinner.JPG') }}">
-            <!-- <img id="bg2" class="background-img" src="{{ url_for('static', filename='img/passover_2.JPG') }}"> 
-            <img id="bg3" class="background-img" src="{{ url_for('static', filename='img/purim_dinner.JPG') }}">  -->
-
-            <script>
-
-            </script>
-
-            <div class="welcome-text">
-                <div class="welcome_1-text">
-                    <p>Shalom, </p>
-                </div>
-                
-                <div class="welcome_2-text">
-                    <p>We are a small group of <br> Shabbat enjoyers. </p>
-                </div>
-
-                <div class="welcome_3-text">
-                    <a>We welcome you to join us.</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="right-container">
-            <button class="right-button">Learn More</button>
-            <button class="right-button">Sign Up</button>
-        </div>
-
+    <div class="shifty-title">
+        <div class="letters">M</div>
+        <div class="letters">U</div>
+        <div class="letters">S</div>
+        <div class="letters">E</div>
     </div>
 
-    <footer>
-        <p>&copy; Shabbat @ Vic. All rights reserved.</p>
-        <p>Made by Sean Belavin</p>
-        <p>Last Updated: Aug 16th 2024</p>
-    </footer>
+    <div class="footer">Footer</div>
 
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script>
+        const container = document.querySelector('.shifty-title');
+        const maxOffset = 20; // Maximum distance the container can move from center
+            
+        document.addEventListener('mousemove', (event) => {
+            const { clientX, clientY } = event;
+            const { innerWidth, innerHeight } = window;
+
+            // Calculate the offset percentages
+            const offsetX = ((clientX / innerWidth) - 0.5) * 2;
+            const offsetY = ((clientY / innerHeight) - 0.5) * 2;
+
+            // Calculate the final transform values
+            const translateX = -offsetX * maxOffset;
+            const translateY = -offsetY * maxOffset;
+
+            container.style.transform = `translate(-50%, -50%) translate(${translateX}px, ${translateY}px)`;
+        });
+    </script>
 </body>
 
 </html>
