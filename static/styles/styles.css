@@ -35,25 +35,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#36454F, #AA305C);
-  background-size: 100% 200%;
+  background: linear-gradient(#D3F8E2, #E4C1F9, #F694C1, #EDE7B1, #A9DEF9);
+  background-size: 100% 600%;
   overflow: hidden;
-  animation: animateGradient 10s linear infinite;
+  animation: animateGradient 30s linear infinite;
   /* font-family: "Raleway", sans-serif; */
 }
 
 .header{
   position: absolute;
-  left: 91vw;
-  top: 15vh;
+  left: 52.5vw;
+  top: 25vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
   color: black;
 
-  font-family: the_muse;
-  font-size: 3vw;
+  font-family: "Rammetto", sans-serif;
+  font-weight: 800;
+  font-size: 5vw;
+  text-align: center;
 
   transition: transform 2s ease-out !important;
 }
@@ -84,7 +86,6 @@ body {
   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
   transition: transform 0.2s ease, background-color 0.2s ease;
 
-  font-family: the_muse;
   transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s ease, height 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.5s ease;
 
   display: flex;
@@ -122,9 +123,9 @@ body {
   text-wrap: nowrap;
 
   color: black;
-  font-family: the_muse;
-  font-weight: 600;
-  font-size: 2vw;
+  font-family: "Rammetto", sans-serif;
+  font-weight: 800;
+  font-size: 3.5vw;
 }
 
 .text_slide_small {
@@ -136,9 +137,9 @@ body {
   text-wrap: nowrap;
 
   color: black;
-  font-family: the_muse;
+  font-family: "Rammetto", sans-serif;
   font-weight: 600;
-  font-size: 2vw;
+  font-size: 3.5vw;
 }
 
 .left{
