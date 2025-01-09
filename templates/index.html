@@ -16,7 +16,9 @@
 </head>
 
 <body>
-    <div class="header">THE</div>
+    <div class="header">
+        <div class="shifty-title">THE</div>
+    </div>
 
     <!-- <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/wnhxl/qavf/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div> -->
 
@@ -24,28 +26,30 @@
         <div class="letters" id="master_works">
             <div class="letter">
                 <img class="cap-letter" src="static/img/Muse_M.svg"/>
-                <div class="text_slide right">aster Works</div>
+                <div class="text_slide right">
+                        EBSITE <br> SPECIALS
+                </div>
             </div>
         </div>
 
         <div class="letters" id="about_us">
             <div class="letter">
-                <div class="text_slide left">About</div>
+                <div class="text_slide left">ABO &#160; &#160; UT</div>
                 <img class="cap-letter" src="static/img/Muse_U.svg"/>
-                <div class="text_slide right">s</div>
+                <div class="text_slide_small right">S</div>
             </div>
         </div>
 
         <div class="letters" id="submissions">
             <div class="letter">
                 <img class="cap-letter" src="static/img/Muse_S.svg"/>
-                <div class="text_slide right">ubmissions</div>
+                <div class="text_slide right">UBMIT <br> WO&#160; &#160; &#160;RK </div>
             </div>
         </div>
         <div class="letters" id="editions">
             <div class="letter">
                 <img class="cap-letter" src="static/img/Muse_E.svg"/>
-                <div class="text_slide right">ditions</div>
+                <div class="text_slide right">DITIO&#160; &#160; &#160;NS</div>
             </div>
         </div>
     </div>
@@ -53,9 +57,9 @@
     <div class="footer">Designed by Sean Belavin </div>
 
     <script>
-        const container = document.querySelector('.shifty-title');
-        const maxOffset = 20; // Maximum distance the container can move from center
-            
+        const containers = document.querySelectorAll('.shifty-title');
+        const maxOffset = 40; // Maximum distance the container can move from center
+
         document.addEventListener('mousemove', (event) => {
             const { clientX, clientY } = event;
             const { innerWidth, innerHeight } = window;
@@ -68,7 +72,10 @@
             const translateX = -offsetX * maxOffset;
             const translateY = -offsetY * maxOffset;
 
-            container.style.transform = `translate(-50%, -50%) translate(${translateX}px, ${translateY}px)`;
+            // Apply the transformation to each container
+            containers.forEach(container => {
+                container.style.transform = `translate(-50%, -50%) translate(${translateX}px, ${translateY}px)`;
+            });
         });
 
         document.addEventListener('DOMContentLoaded', function() {

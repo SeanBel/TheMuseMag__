@@ -14,7 +14,7 @@ html{
 
 @font-face {
   font-family: the_muse;
-  src: url(the_muse.ttf);
+  src: url(muse_font.ttf);
 }
 
 @keyframes animateGradient {
@@ -44,17 +44,18 @@ body {
 
 .header{
   position: absolute;
-  left: 0;
-  top: 0;
-  height: 15vh;
-  width: 100vw;
-  opacity: 0.5;
-  background-color: rgb(0,0,0);
+  left: 91vw;
+  top: 15vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  color: wheat
+  color: black;
+
+  font-family: the_muse;
+  font-size: 3vw;
+
+  transition: transform 2s ease-out !important;
 }
 
 .shifty-title {
@@ -68,6 +69,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) translate(0px, 0px);
+  transition: transform 0.8s ease-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,7 +95,7 @@ body {
 
 .letters:hover {
   height: max(20vh, 20vw);
-  width: max(40vh, 40vw);
+  width: max(30vh, 30vw);
   background-color: none;
 }
 
@@ -120,9 +122,23 @@ body {
   text-wrap: nowrap;
 
   color: black;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: the_muse;
   font-weight: 600;
-  font-size: 5vh;
+  font-size: 2vw;
+}
+
+.text_slide_small {
+  width: 0;
+  background-color: none;
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  text-wrap: nowrap;
+
+  color: black;
+  font-family: the_muse;
+  font-weight: 600;
+  font-size: 2vw;
 }
 
 .left{
@@ -135,9 +151,22 @@ body {
   background-color: none;
 }
 
-.letters:hover .text_slide{
-  width: 15vw;
+#master_works .cap-letter {
+  transition: transform 0.3s ease-in-out;
 }
+
+#master_works:hover .cap-letter {
+  transform: rotate(180deg);
+}
+
+.letters:hover .text_slide {
+  width: 24vw;
+}
+
+.letters:hover .text_slide_small {
+  width: 16vw;
+}
+
 
 .footer {
   position: absolute;

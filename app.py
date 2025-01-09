@@ -10,22 +10,22 @@ def home():
 # Route: Masterworks
 @app.route('/masterworks', methods=["GET"])
 def masterworks():
-    return render_template("master_works.html")
+    return render_template("error.html")
 
 # Route: About Us
 @app.route('/about', methods=["GET"])
 def about_us():
-    return render_template("about_us.html")
+    return render_template("error.html")
 
 # Route: Submissions
 @app.route('/submissions', methods=["GET"])
 def submissions():
-    return render_template("submit.html")
+    return render_template("error.html")
 
 # Route: Editions
 @app.route('/editions', methods=["GET"])
 def editions():
-    return render_template("editions.html")
+    return render_template("error.html")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=8000)
