@@ -18,15 +18,24 @@ html{
 }
 
 @keyframes animateGradient {
-  0% {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
       background-position: 0% 0%;
   }
-  50% {
-      background-position: 0% 100%;
+}
+
+@keyframes animateImage {
+  0% {
+      background-position: 50% 0%;
   }
   100% {
-    background-position: 0% 0%;
-}
+      background-position: 50% 100%;
+  }
 }
 
 body {
@@ -42,6 +51,14 @@ body {
   /* font-family: "Raleway", sans-serif; */
 }
 
+.boarder{
+  height: 100vh;
+  width: 100vw;
+  background: url('Muse_math.svg') no-repeat center center;
+  background-size: cover;
+  animation: animateImage 10s linear infinite;
+}
+
 .header{
   position: absolute;
   left: 52.5vw;
@@ -52,8 +69,8 @@ body {
   justify-content: center;
   color: black;
 
-  font-family: "Rammetto", sans-serif;
-  font-weight: 800;
+  font-family: "Outfit";
+  font-weight: 1000;
   font-size: 5vw;
   text-align: center;
 
@@ -123,8 +140,8 @@ body {
   text-wrap: nowrap;
 
   color: black;
-  font-family: "Rammetto", sans-serif;
-  font-weight: 800;
+  font-family: "Outfit";
+  font-weight: 1000;
   font-size: 3.5vw;
 }
 
@@ -137,8 +154,8 @@ body {
   text-wrap: nowrap;
 
   color: black;
-  font-family: "Rammetto", sans-serif;
-  font-weight: 600;
+  font-family: "Outfit";
+  font-weight: 1000;
   font-size: 3.5vw;
 }
 
@@ -182,4 +199,7 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--wwhite);
+
+  font-family: "Outfit";
+  font-weight: 400;
 }

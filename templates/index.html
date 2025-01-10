@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rammetto+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <title>TheMuseMag__</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
@@ -16,46 +16,47 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="shifty-title">THE</div>
-    </div>
+    <div class="boarder">
+        <div class="header">
+            <div class="shifty-title">THE</div>
+        </div>
 
-    <!-- <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/wnhxl/qavf/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div> -->
+        <!-- <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/wnhxl/qavf/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div> -->
 
-    <div class="shifty-title">
-        <div class="letters" id="master_works">
-            <div class="letter">
-                <img class="cap-letter" src="static/img/Muse_M.svg"/>
-                <div class="text_slide right">
-                        EBSITE <br> &#160; &#160; SPECIALS
+        <div class="shifty-title">
+            <div class="letters" id="master_works">
+                <div class="letter">
+                    <img class="cap-letter" src="static/img/Muse_M.svg"/>
+                    <div class="text_slide right">
+                            EBSITE <br> &#160; &#160; SPECIALS
+                    </div>
+                </div>
+            </div>
+
+            <div class="letters" id="about_us">
+                <div class="letter">
+                    <div class="text_slide left">ABOUT &#160;</div>
+                    <img class="cap-letter" src="static/img/Muse_U.svg"/>
+                    <div class="text_slide_small right">S</div>
+                </div>
+            </div>
+
+            <div class="letters" id="submissions">
+                <div class="letter">
+                    <img class="cap-letter" src="static/img/Muse_S.svg"/>
+                    <div class="text_slide right">UBMIT <br> &#160; &#160; &#160; WORK </div>
+                </div>
+            </div>
+            <div class="letters" id="editions">
+                <div class="letter">
+                    <img class="cap-letter" src="static/img/Muse_E.svg"/>
+                    <div class="text_slide right" id="ed"> DITIONS</div>
                 </div>
             </div>
         </div>
 
-        <div class="letters" id="about_us">
-            <div class="letter">
-                <div class="text_slide left">ABOUT &#160;</div>
-                <img class="cap-letter" src="static/img/Muse_U.svg"/>
-                <div class="text_slide_small right">S</div>
-            </div>
-        </div>
-
-        <div class="letters" id="submissions">
-            <div class="letter">
-                <img class="cap-letter" src="static/img/Muse_S.svg"/>
-                <div class="text_slide right">UBMIT <br> &#160; &#160; &#160; WORK </div>
-            </div>
-        </div>
-        <div class="letters" id="editions">
-            <div class="letter">
-                <img class="cap-letter" src="static/img/Muse_E.svg"/>
-                <div class="text_slide right" id="ed"> <br> DITIONS</div>
-            </div>
-        </div>
+        <div class="footer">Designed by Sean Belavin </div>
     </div>
-
-    <div class="footer">Designed by Sean Belavin </div>
-
     <script>
         const containers = document.querySelectorAll('.shifty-title');
         const maxOffset = 40; // Maximum distance the container can move from center
