@@ -10,20 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <title>TheMuseMag__</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
     <script src="js/scripts.js" type="text/javascript"></script>
 
 </head>
 
 <body>
-    <div class="boarder">
-        <div class="header">
-            <div class="shifty-title">THE</div>
-        </div>
+    
+    <img id="background" src="static/img/Muse_math.svg">
 
-        <!-- <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/wnhxl/qavf/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div> -->
+    <!-- <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/wnhxl/qavf/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div> -->
 
-        <div class="shifty-title">
+    <div class="shifty-title">
+        <div class="header"> THE </div>
+        <div class="title">
             <div class="letters" id="master_works">
                 <div class="letter">
                     <img class="cap-letter" src="static/img/Muse_M.svg"/>
@@ -54,12 +54,12 @@
                 </div>
             </div>
         </div>
-
-        <div class="footer">Designed by Sean Belavin </div>
     </div>
+
+    <div class="footer">Designed by Sean Belavin </div>
     <script>
         const containers = document.querySelectorAll('.shifty-title');
-        const maxOffset = 40; // Maximum distance the container can move from center
+        const maxOffset = 3; // Maximum distance the container can move from center
 
         document.addEventListener('mousemove', (event) => {
             const { clientX, clientY } = event;
@@ -75,27 +75,26 @@
 
             // Apply the transformation to each container
             containers.forEach(container => {
-                container.style.transform = `translate(-50%, -50%) translate(${translateX}px, ${translateY}px)`;
+                container.style.transform = `translate(-50%, -50%) translate(${translateX}vw, ${translateY}vh)`;
             });
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-    const routes = {
-        'master_works': '/masterworks',
-        'about_us': '/about',
-        'submissions': '/submissions',
-        'editions': '/editions'
-    };
-
-    for (const [containerId, route] of Object.entries(routes)) {
-        const container = document.getElementById(containerId);
-        if (container) {
-            container.addEventListener('click', function() {
-                window.location.href = route;
-            });
-        }
-    }
-});
+            const routes = {
+                'master_works': '/masterworks',
+                'about_us': '/about',
+                'submissions': '/submissions',
+                'editions': '/editions'
+            };
+            for (const [containerId, route] of Object.entries(routes)) {
+                const container = document.getElementById(containerId);
+                if (container) {
+                    container.addEventListener('click', function() {
+                        window.location.href = route;
+                    });
+                }
+            }
+        });
     </script>
 </body>
 

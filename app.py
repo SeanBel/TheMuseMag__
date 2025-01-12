@@ -15,7 +15,7 @@ def masterworks():
 # Route: About Us
 @app.route('/about', methods=["GET"])
 def about_us():
-    return render_template("error.html")
+    return render_template("about_us.html")
 
 # Route: Submissions
 @app.route('/submissions', methods=["GET"])
